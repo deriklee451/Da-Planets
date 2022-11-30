@@ -7,6 +7,7 @@ export class GalaxiesController extends BaseController {
         super('api/galaxies')
         this.router
             .get('', this.getAll)
+            .post('', this.create)
 
 
     }
@@ -22,7 +23,7 @@ export class GalaxiesController extends BaseController {
 
     async create(req, res, next) {
         try {
-            const newGalaxy = galaxiesService.create(req.body)
+            const newGalaxy = await galaxiesService.create(req.body)
             return res.send(newGalaxy)
         } catch (error) {
             next(error)

@@ -5,4 +5,4 @@ export const GalaxySchema = new Schema({
     stars: { type: Number, required: true }
 })
 
-GalaxySchema.virtual({})
+// GalaxySchema.virtual({})

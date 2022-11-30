@@ -7,3 +7,5 @@ export const PlanetSchema = new Schema({
     atmosphere: { type: Boolean, required: true, default: false },
     galaxyId: { type: Schema.Types.ObjectId, required: true },
 }, { timestamps: true, toJSON: { virtuals: true } })
+
+// PlanetSchema.virtual({})
